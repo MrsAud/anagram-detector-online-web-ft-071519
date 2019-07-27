@@ -8,12 +8,14 @@ class Anagram
   
   def match(possible_words)
     word_array = word.split("")
+    matches = []
     #binding.pry
     possible_words.each do |possible_word|
       if possible_word.split("").sort == word_array.sort
-        puts possible_word
+        matches << possible_word
         binding.pry
       end
+    matches
     end
     
   end
